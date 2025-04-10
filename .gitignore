@@ -1,0 +1,12 @@
+*
+
+!.gitignore
+!.config/
+!.config/ghostty/
+!.config/ghostty/**
+!.config/nvim/
+!.config/nvim/**
+!.bash_profile
+!.gitconfig
+!.tmux.conf
+

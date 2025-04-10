@@ -1,0 +1,10 @@
+font-family = Fira Code
+theme = NvimDark
+
+keybind = super+h=text:\x1bh
+keybind = super+j=text:\x1bj
+keybind = super+k=text:\x1bk
+keybind = super+l=text:\x1bl
+
+keybind = super+m=text:\x1bm
+
