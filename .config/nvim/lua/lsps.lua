@@ -8,4 +8,5 @@ lc.cmake.setup{}
 lc.html.setup{}
 lc.dockerls.setup{}
 lc.jsonls.setup{}
+lc.ts_ls.setup{}
 

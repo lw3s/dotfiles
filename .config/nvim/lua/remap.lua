@@ -18,8 +18,11 @@ end
 nnrm("-", "<CMD>Oil<CR>")
 nnrm("<leader>e", vim.diagnostic.open_float)
 nnrm("<leader>r", vim.lsp.buf.rename)
+nnrm("<S-k>", vim.lsp.buf.signature_help)
+nnrm("gd", vim.lsp.buf.definition)
+nnrm(":W", ":w")
 
-local builtin = require('telescope.builtin')
+local builtin = require("telescope.builtin")
 nnrm("<leader>ff", builtin.find_files)
 nnrm("<leader>fg", builtin.live_grep)
 nnrm("<leader>fb", builtin.buffers)
