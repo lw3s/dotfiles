@@ -22,16 +22,28 @@ require("lazy").setup({
     "neovim/nvim-lspconfig",
     "williamboman/mason.nvim",
     "numToStr/Comment.nvim",
-    "vim-airline/vim-airline",
     "stevearc/oil.nvim",
-    "HiPhish/rainbow-delimiters.nvim",
     "github/copilot.vim",
-    "nvim-lua/plenary.nvim",
-    "nvim-telescope/telescope.nvim"
+    "HiPhish/rainbow-delimiters.nvim",
+    "akinsho/git-conflict.nvim",
+    "nvim-lualine/lualine.nvim",
+    "ggandor/leap.nvim"
   }
 })
 
 require("mason").setup()
-require("oil").setup()
-require("telescope").setup()
+require("oil").setup({
+  view_options = {
+    show_hidden = true,
+    is_always_hidden = function (name, _)
+        return name == ".git" or name == ".venv" or name == ".."
+    end
+  }
+})
+require("lualine").setup({
+  options = {
+    theme = "powerline"
+  }
+})
+require("leap").add_default_mappings()
 

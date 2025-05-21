@@ -22,13 +22,6 @@ nnrm("<S-k>", vim.lsp.buf.signature_help)
 nnrm("gd", vim.lsp.buf.definition)
 nnrm(":W", ":w")
 
-local builtin = require("telescope.builtin")
-nnrm("<leader>ff", builtin.find_files)
-nnrm("<leader>fg", builtin.live_grep)
-nnrm("<leader>fb", builtin.buffers)
-nnrm("<leader>fh", builtin.help_tags)
-
-
 nvnrm("w", "W")
 nvnrm("W", "w")
 nvnrm("b", "B")
