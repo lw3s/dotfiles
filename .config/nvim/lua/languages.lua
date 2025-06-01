@@ -1,3 +1,11 @@
+require("nvim-treesitter.configs").setup({
+  ensure_installed = {
+    "lua", "vim", "vimdoc", "python", "javascript", "typescript", "c", "cpp", "html", "css", "json", "markdown", "sql"
+  }, highlight = { enable = true }
+})
+
+
+
 local tab_for_type = function(extension, spaces)
   vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
     pattern = {"*." .. extension},
@@ -9,7 +17,6 @@ local tab_for_type = function(extension, spaces)
     end,
   })
 end
-
 
 tab_for_type("lua", 2)
 tab_for_type("py", 4)

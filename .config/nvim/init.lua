@@ -1,7 +1,6 @@
 require("packages")
 require("remap")
-require("lsps")
-require("filetypes")
+require("languages")
 
 vim.opt.number = true
 vim.opt.relativenumber = true

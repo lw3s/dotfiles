@@ -2,15 +2,15 @@ local nnrm = function(new, old) -- nnrm = normal-no-recurse-map
     vim.keymap.set("n", new, old, { noremap = true, silent = true })
 end
 
-local vnrm = function(new, old) -- vnrm = visual-no-recurse-map
-    vim.keymap.set("v", new, old, { noremap = true, silent = true })
+local xnrm = function(new, old) -- xnrm = visual-no-recurse-map
+    vim.keymap.set("x", new, old, { noremap = true, silent = true })
 end
 
 local inrm = function(new, old) -- inrm = insert-no-recurse-map
     vim.keymap.set("i", new, old, { noremap = true, silent = true })
 end
 
-local nvnrm = function(new, old) -- nvnrm = normal/visual-no-recurse-map
+local nxnrm = function(new, old) -- nxnrm = normal/visual-no-recurse-map
     vim.keymap.set("n", new, old, { noremap = true, silent = true })
     vim.keymap.set("v", new, old, { noremap = true, silent = true })
 end
@@ -22,22 +22,19 @@ nnrm("<S-k>", vim.lsp.buf.signature_help)
 nnrm("gd", vim.lsp.buf.definition)
 nnrm(":W", ":w")
 
-nvnrm("w", "W")
-nvnrm("W", "w")
-nvnrm("b", "B")
-nvnrm("B", "b")
+nxnrm("w", "W")
+nxnrm("W", "w")
+nxnrm("b", "B")
+nxnrm("B", "b")
 
-nvnrm("j", "h")
-nvnrm("k", "j")
-nvnrm("l", "k")
-nvnrm(";", "l")
+nxnrm("j", "h")
+nxnrm("k", "j")
+nxnrm("l", "k")
+nxnrm(";", "l")
+nxnrm("h", ";")
 
-nvnrm("<leader>1", "0i")
-nvnrm("<leader>0", "$i<Right>")
-
-nnrm("P", "\"0p")
-nnrm("<leader>p", "\"*p")
-vnrm("<leader>y", "\"*y")
+nxnrm("<leader>1", "0i")
+nxnrm("<leader>0", "$i<Right>")
 
 inrm("<esc>", "<Right><esc>")
 
