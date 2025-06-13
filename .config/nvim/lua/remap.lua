@@ -12,15 +12,24 @@ end
 
 local nxnrm = function(new, old) -- nxnrm = normal/visual-no-recurse-map
     vim.keymap.set("n", new, old, { noremap = true, silent = true })
-    vim.keymap.set("v", new, old, { noremap = true, silent = true })
+    vim.keymap.set("x", new, old, { noremap = true, silent = true })
 end
 
 nnrm("-", "<CMD>Oil<CR>")
+nnrm("<leader>bm", require("buffer_manager.ui").toggle_quick_menu)
+
 nnrm("<leader>e", vim.diagnostic.open_float)
 nnrm("<leader>r", vim.lsp.buf.rename)
 nnrm("<S-k>", vim.lsp.buf.signature_help)
 nnrm("gd", vim.lsp.buf.definition)
-nnrm(":W", ":w")
+
+nnrm("<leader>d ", ":DapContinue<CR>")
+nnrm("<leader>dj", ":DapStepBack<CR>")
+nnrm("<leader>dk", ":DapStepInto<CR>")
+nnrm("<leader>dl", ":DapStepOut<CR>")
+nnrm("<leader>d;", ":DapStepOver<CR>")
+nnrm("<leader>db", ":DapToggleBreakpoint<CR>")
+nnrm("<leader>du", require("dapui").toggle)
 
 nxnrm("w", "W")
 nxnrm("W", "w")

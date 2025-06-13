@@ -39,6 +39,5 @@ function rt {
 cd ~/Desktop
 PS1='$(git branch --show-current 2>/dev/null) $(dirs +0) $ '
 brew upgrade
-tmux attach
 clear
 

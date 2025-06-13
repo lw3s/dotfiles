@@ -2,6 +2,7 @@
 
 !.gitignore
 !.config/
+!.config/pycodestyle
 !.config/ghostty/
 !.config/ghostty/**
 !.config/nvim/
